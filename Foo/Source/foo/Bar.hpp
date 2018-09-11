@@ -8,8 +8,9 @@
 namespace foo {
 
 class BAR_EXPORT Bar {
- public:
-  static void say() {
+public:
+
+static void say() {
     Baz::say();
 #if (FOO_BAR_DEBUG)
     const char* m = "Bar.hpp (Debug)";
@@ -18,10 +19,11 @@ class BAR_EXPORT Bar {
 #endif
     std::cout << m << std::endl;
     cpp_say();
-  }
+}
 
- private:
-  static void cpp_say();
+private:
+static void cpp_say();
+
 };
 
 }

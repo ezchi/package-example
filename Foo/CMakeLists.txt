@@ -32,9 +32,9 @@ add_library(baz "Source/foo/Baz.cpp" "Source/foo/Baz.hpp")
 
 # Add definitions for targets
 # Values:
-#   * Debug: -DFOO_BAR_DEBUG=1
+#   * Debug  : -DFOO_BAR_DEBUG=1
 #   * Release: -DFOO_BAR_DEBUG=0
-#   * other: -DFOO_BAR_DEBUG=0
+#   * other  : -DFOO_BAR_DEBUG=0
 target_compile_definitions(bar PUBLIC "FOO_BAR_DEBUG=$<CONFIG:Debug>")
 target_compile_definitions(baz PUBLIC "FOO_BAZ_DEBUG=$<CONFIG:Debug>")
 
@@ -154,5 +154,3 @@ install(
     NAMESPACE "${namespace}"
     DESTINATION "${config_install_dir}"
 )
-
-# }
